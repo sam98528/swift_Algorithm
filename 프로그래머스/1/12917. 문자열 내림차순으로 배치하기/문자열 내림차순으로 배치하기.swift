@@ -14,8 +14,14 @@ func solution(_ s:String) -> String {
 
 */
 
+/*
+
 func solution(_ s:String) -> String {
     var a = String(String(s.sorted()).reversed())
     return a
-    
+}
+
+*/
+func solution(_ s:String) -> String {
+    return String(s.sorted{$0 > $1})
 }
