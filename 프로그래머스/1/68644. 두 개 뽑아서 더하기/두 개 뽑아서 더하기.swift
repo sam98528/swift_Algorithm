@@ -7,5 +7,5 @@ func solution(_ numbers:[Int]) -> [Int] {
                 ans.append(numbers[i] + numbers[j])    
             }
         }
-    return Array(Set(ans)).sorted()
+    return Set(ans).sorted()
     }
