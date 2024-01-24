@@ -1,3 +1,5 @@
+//O(n * sqrt(n) 시간 복잡도
+
 import Foundation
 
 func solution(_ number:Int, _ limit:Int, _ power:Int) -> Int {
@@ -32,6 +34,7 @@ func divisor (_ number: Int) -> Int {
 /*
 // 다른 사람 풀이 
 // 약수를 구하는 색다른 방법
+// O(n * log(n) 시간 복잡도
 func solution(_ number:Int, _ limit:Int, _ power:Int) -> Int {
     var attack = [Int](repeating: 0, count: number+1)
 
