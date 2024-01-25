@@ -2,17 +2,11 @@ import Foundation
 
 func solution(_ X:String, _ Y:String) -> String {
    var list: [String] = []
-    
-    for i in (0...9) {
-        let xCount = X.filter { String($0) == String(i) }.count
-        let yCount = Y.filter { String($0) == String(i) }.count
-        list += Array(repeating: String(i), count: min(xCount, yCount))
+  
+    for i in stride(from:9, through:0, by:-1){
+        let countX = X.filter{String($0) == String(i)}.count
+        let countY = Y.filter{String($0) == String(i)}.count
+        list += Array(repeating:String(i), count: min(countX,countY))
     }
-    if (list.isEmpty){
-        return "-1"
-    }else if (list.filter{$0 == "0"}.count == list.count) {
-        return "0"
-    }else{
-        return list.sorted(by: >).joined()
-    }
+    return list.isEmpty ? "-1" : list.filter{$0 == "0"}.count == list.count ? "0" : list.joined()
 }
