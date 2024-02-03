@@ -12,6 +12,8 @@ func solution(_ s:String) -> Int {
             if String(char) == "}" || String(char) == ")" || String(char) == "]"{
                 if check.contains(stack.suffix(2)){
                     stack.removeLast(2)
+                }else{
+                    break
                 }
             }
         }
