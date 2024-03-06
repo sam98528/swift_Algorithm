@@ -4,8 +4,7 @@ func solution(_ array:[Int], _ commands:[[Int]]) -> [Int] {
     var ans : [Int] = []
     
     for i in commands{
-        var newArr = Array(array[i[0]-1...i[1]-1])
-        newArr.sort()
+        var newArr = Array(array[i[0]-1...i[1]-1]).sorted()
         ans.append(newArr[i[2]-1])
     }
     return ans
