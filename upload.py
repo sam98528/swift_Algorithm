@@ -5,6 +5,7 @@ from urllib import parse
 
 HEADER="""#
 # Swift 문제 풀이 목록
+## 프로그래머스 및 백준 문제들을 정리한 Repository입니다!
 """
 
 def main():
@@ -36,9 +37,9 @@ def main():
       
     if directory not in directories:
       if directory in ["프로그래머스","백준"]:
-        content += "## 📚 {}\n".format(directory)
+        content += "## 🐶 {}\n".format(directory)
       else:
-        content += "### 🚀 Level {}\n".format(directory)
+        content += "### 🙉 Level {}\n".format(directory)
         content += "| 문제번호 | 링크 |\n"
         content += "| :--------: | :--------: |\n"
       directories.append(directory)
