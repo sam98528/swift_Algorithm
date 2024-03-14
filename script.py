@@ -1,40 +1,10 @@
-#!/usr/bin/env python
-
-import os
-from urllib import parse
-from datetime import datetime
-from collections import defaultdict
-
-
-
-def extract_submission_date(readme_path):
-    try:
-        with open(readme_path, "r", encoding="utf-8") as f:
-            readme_lines = f.readlines()
-            for index, line in enumerate(readme_lines):
-                if "제출 일자" in line:
-                    submission_date_index = index + 2
-                    submission_date_str = readme_lines[submission_date_index].strip()
-
-                    # 날짜를 파싱하여 datetime 객체로 변환
-                    try:
-                        submission_date = datetime.strptime(submission_date_str, "%Y년 %m월 %d일 %H:%M:%S")
-                    except ValueError:
-                        print("이상한 데이터 발견: {}".format(submission_date_str))
-                        submission_date = datetime(2024, 1, 1, 0, 0, 0)
-                    return submission_date
-            print("Submission Date를 찾을 수 없습니다.")
-    except FileNotFoundError:
-        print("README.md 파일을 찾을 수 없습니다.")
-
-
-
 def main():
     content = ""
     directory_count = 0
 
     directories = []
     solveds = []
+    problems = []  # 문제 정보를 담을 리스트
 
     for root, dirs, files in os.walk("."):
         dirs.sort()
@@ -57,7 +27,7 @@ def main():
             continue
 
         if directory not in directories:
-            if directory in ["프로그래머스"]:
+            if directory in ["프로그래머스", "백준"]:
                 content += "## 🐶 {}\n".format(directory)
             else:
                 content += "### 🙉 Level {}\n".format(directory)
@@ -70,11 +40,20 @@ def main():
                 if category not in solveds:
                     submission_date = extract_submission_date(os.path.join(root, file))
                     if submission_date:
-                        content += "| {} |[링크]({})|{}|\n".format(category, parse.quote(os.path.join(root, file)), submission_date.strftime("%Y-%m-%d"))
+                        problems.append((category, os.path.join(root, file), submission_date))
                     else:
-                        content += "| {} |[링크]({})|{}|\n".format(category, parse.quote(os.path.join(root, file)), "제출 일자를 찾을 수 없음")
+                        problems.append((category, os.path.join(root, file), None))
                     solveds.append(category)
                     directory_count += 1
+
+    # 제출일자를 기준으로 정렬
+    sorted_problems = sorted(problems, key=lambda x: x[2] if x[2] else datetime(2024, 1, 1))
+
+    for category, file_path, submission_date in sorted_problems:
+        if submission_date:
+            content += "| {} |[링크]({})|{}|\n".format(category, parse.quote(file_path), submission_date.strftime("%Y-%m-%d"))
+        else:
+            content += "| {} |[링크]({})|{}|\n".format(category, parse.quote(file_path), "제출 일자를 찾을 수 없음")
 
     content = """
 # Swift 문제 풀이 목록\n
@@ -83,6 +62,3 @@ def main():
 """.format(directory_count) + content
     with open("README.md", "w") as fd:
         fd.write(content)
-
-if __name__ == "__main__":
-    main()
