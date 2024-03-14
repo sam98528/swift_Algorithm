@@ -75,8 +75,8 @@ def main():
                     solveds.append(category)
                     directory_count += 1
 
-    # 문제 제출일자를 기준으로 정렬
-    sorted_content_entries = sorted(content_entries, key=lambda x: x.split("|")[-1])
+    # 날짜를 기준으로 정렬
+    sorted_content_entries = sorted(content_entries, key=lambda x: datetime.strptime(x.split("|")[-1].strip(), "%Y-%m-%d"), reverse=True)
 
     content = """
 # Swift 문제 풀이 목록\n
