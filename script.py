@@ -39,14 +39,11 @@ def main():
             if file == 'README.md':
                 if category not in solveds:
                     submission_date = extract_submission_date(os.path.join(root, file))
-                    if submission_date:
-                        problems.append((category, os.path.join(root, file), submission_date))
-                    else:
-                        problems.append((category, os.path.join(root, file), None))
+                    problems.append((category, os.path.join(root, file), submission_date))
                     solveds.append(category)
                     directory_count += 1
 
-    # 제출일자를 기준으로 정렬
+    # 제출일자가 None인 경우 datetime(2024, 1, 1)로 치환하여 정렬
     sorted_problems = sorted(problems, key=lambda x: x[2] if x[2] else datetime(2024, 1, 1))
 
     for category, file_path, submission_date in sorted_problems:
