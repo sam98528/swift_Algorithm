@@ -35,8 +35,7 @@ def main():
       continue
       
     if directory not in directories:
-      # if directory in ["프로그래머스","백준"]:
-      if directory in ["프로그래머스"]:
+      if directory in ["프로그래머스","백준"]:
         content += "## 📚 {}\n".format(directory)
       else:
         content += "### 🚀 Level {}\n".format(directory)
@@ -46,7 +45,7 @@ def main():
       
     for file in files:
       if category not in solveds:
-        content += "|<center>{}|[링크]({})|\n".format(category, parse.quote(os.path.join(root, file)))
+        content += "| <center>{} |[링크]({})|\n".format(category, parse.quote(os.path.join(root, file)))
         solveds.append(category)
         
   with open("README.md", "w") as fd:
