@@ -77,7 +77,7 @@ def main():
                     directory_count += 1
 
     # 날짜를 기준으로 정렬
-    sorted_content_entries = sorted(sorting_entries, key=lambda x: datetime.strptime(x.split("|")[-1].strip(), "%Y-%m-%d"), reverse=True)
+    # sorted_content_entries = sorted(sorting_entries, key=lambda x: datetime.strptime(x.split("|")[-1].strip(), "%Y-%m-%d"), reverse=True)
 
     content = """
 # Swift 문제 풀이 목록\n
