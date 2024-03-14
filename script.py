@@ -5,6 +5,7 @@ from urllib import parse
 from datetime import datetime
 from collections import defaultdict
 
+
 def extract_submission_date(readme_path):
     try:
         with open(readme_path, "r", encoding="utf-8") as f:
@@ -25,8 +26,9 @@ def extract_submission_date(readme_path):
     except FileNotFoundError:
         print("README.md 파일을 찾을 수 없습니다.")
 
+
 def main():
-    content = ""
+    content_entries = []
     directory_count = 0
 
     directories = []
@@ -53,9 +55,11 @@ def main():
             continue
 
         if directory not in directories:
-            content += "### 🙉 Level {}\n".format(directory)
-            content += "| 난이도 | 문제번호 | 링크 | 제출일자 |\n"
-            content += "| ----- | ------------- | ------------- | ------------- |\n"
+            if directory in ["프로그래머스", "백준"]:
+                content_entries.append("## 🐶 {}\n".format(directory))
+            else:
+                content_entries.append("| 난이도 | 문제번호 | 링크 | 제출일자 |\n")
+                content_entries.append("| ------------- | ------------- | ------------- | ------------- |\n")
             directories.append(directory)
 
         for file in files:
@@ -63,26 +67,30 @@ def main():
                 if category not in solveds:
                     submission_date = extract_submission_date(os.path.join(root, file))
                     if submission_date:
-                        content += "| {} | {} |[링크]({})|{}|\n".format(directory, category, parse.quote(os.path.join(root, file)), submission_date.strftime("%Y-%m-%d"))
+                        entry = "| {} | {} |[링크]({})|{}|\n".format(directory, category, parse.quote(os.path.join(root, file)), submission_date.strftime("%Y-%m-%d"))
                     else:
-                        content += "| {} | {} |[링크]({})|{}|\n".format(directory, category, parse.quote(os.path.join(root, file)), "제출 일자를 찾을 수 없음")
+                        entry = "| {} | {} |[링크]({})|{}|\n".format(directory, category, parse.quote(os.path.join(root, file)), "제출 일자를 찾을 수 없음")
+                    content_entries.append(entry)
                     solveds.append(category)
                     directory_count += 1
+
+    # 문제 제출일자를 기준으로 정렬
+    sorted_content_entries = sorted(content_entries, key=lambda x: x.split("|")[-1])
 
     content = """
 # Swift 문제 풀이 목록\n
 프로그래머스 및 백준 문제들을 정리한 Repository입니다!\n
 지금까지 총 **{}** 문제를 풀었습니다!
 자동으로 업데이트 중!\n
-""".format(directory_count) + content
+""".format(directory_count)
 
-    # 문제들을 제출일자를 기준으로 정렬
-    sorted_content = content.splitlines()
-    sorted_content = sorted_content[:5] + sorted(sorted_content[5:], key=lambda x: datetime.strptime(x.split('|')[-1].strip(), "%Y-%m-%d"))
-    sorted_content = '\n'.join(sorted_content)
+    # 정렬된 내용을 content에 추가
+    for entry in sorted_content_entries:
+        content += entry
 
     with open("README.md", "w") as fd:
-        fd.write(sorted_content)
+        fd.write(content)
+
 
 if __name__ == "__main__":
     main()
