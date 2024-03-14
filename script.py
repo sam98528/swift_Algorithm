@@ -11,29 +11,17 @@ HEADER="""
 """
 
 def extract_submission_date(readme_path):
-    with open(readme_path, "r", encoding="utf-8") as f:
-        readme_content = f.read()
-        submission_date_start = readme_content.find("제출 일자\n") + len("제출 일자\n")
-        submission_date_end = readme_content.find("\n", submission_date_start)
-        submission_date_str = readme_content[submission_date_start:submission_date_end].strip()
-        
-        # '년', '월', '일', '시', '분', '초'를 기준으로 분리하여 날짜와 시간을 추출
-        submission_date_str_split = submission_date_str.split(' ')
-        year = int(submission_date_str_split[0][:-1])  # '년' 제거 후 연도 추출
-        month = int(submission_date_str_split[1][:-1])  # '월' 제거 후 월 추출
-        day = int(submission_date_str_split[2][:-1])  # '일' 제거 후 일 추출
-        time_str = submission_date_str_split[3]  # 시간 추출
-        
-        # '시', '분', '초'를 ':'로 분리하여 시간 추출
-        time_str_split = time_str.split(':')
-        hour = int(time_str_split[0])
-        minute = int(time_str_split[1])
-        second = int(time_str_split[2])
-        
-        submission_date = datetime(year, month, day, hour, minute, second)
-        return submission_date
+    try:
+        with open(readme_path, "r", encoding="utf-8") as f:
+            readme_lines = f.readlines()
+            for index, line in enumerate(readme_lines):
+                if "제출 일자" in line:
+                    submission_date_index = index + 2
+                    submission_date_str = readme_lines[submission_date_index].strip()
 
-
+                    # 날짜를 파싱하여 datetime 객체로 변환
+                    submission_date = datetime.strptime(submission_date_str, "%Y년 %m월 %d일 %H:%M:%S")
+                    return submission_date
 
 
 def main():
