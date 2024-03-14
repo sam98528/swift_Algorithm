@@ -4,7 +4,6 @@ import os
 from urllib import parse
 
 HEADER="""
-<div align="center">
 # Swift 문제 풀이 목록
 프로그래머스 및 백준 문제들을 정리한 Repository입니다!
 """
@@ -50,8 +49,7 @@ def main():
         if category not in solveds:
           content += "| {} |[링크]({})|\n".format(category, parse.quote(os.path.join(root, file)))
           solveds.append(category)
-
-  content += '</div>'
+          
   with open("README.md", "w") as fd:
     fd.write(content)
     
