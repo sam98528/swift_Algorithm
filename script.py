@@ -58,6 +58,7 @@ def main():
             if directory in ["프로그래머스", "백준"]:
                 content_entries.append("## 🐶 {}\n".format(directory))
             else:
+                content_entries.append("### 🙉 Level {}\n".format(directory))
                 content_entries.append("| 난이도 | 문제번호 | 링크 | 제출일자 |\n")
                 content_entries.append("| ------------- | ------------- | ------------- | ------------- |\n")
             directories.append(directory)
