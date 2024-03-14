@@ -28,9 +28,9 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install python-leetcode
-    - name: Run update.py
+    - name: Run upload.py
       run: |
-        python update.py
+        python upload.py
     - name: Commit changes
       run: |
         git config --global user.name 'sam98528'
