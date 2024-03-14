@@ -45,9 +45,10 @@ def main():
       directories.append(directory)
       
     for file in files:
-      if category not in solveds:
-        content += "| {} |[링크]({})|\n".format(category, parse.quote(os.path.join(root, file)))
-        solveds.append(category)
+      if file == 'README.md':
+        if category not in solveds:
+          content += "| {} |[링크]({})|\n".format(category, parse.quote(os.path.join(root, file)))
+          solveds.append(category)
         
   with open("README.md", "w") as fd:
     fd.write(content)
