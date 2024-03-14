@@ -59,7 +59,6 @@ def main():
             if directory in ["프로그래머스", "백준"]:
                 content_entries.append("## 🐶 {}\n".format(directory))
             else:
-                content_entries.append("### 🙉 Level {}\n".format(directory))
                 content_entries.append("| 난이도 | 문제번호 | 링크 | 제출일자 |\n")
                 content_entries.append("| ------------- | ------------- | ------------- | ------------- |\n")
             directories.append(directory)
@@ -84,11 +83,13 @@ def main():
 프로그래머스 및 백준 문제들을 정리한 Repository입니다!\n
 지금까지 총 **{}** 문제를 풀었습니다!
 자동으로 업데이트 중!\n
-""".format(directory_count) + content_entries + sorting_entries
+""".format(directory_count)
 
     # 정렬된 내용을 content에 추가
-    #for entry in sorted_content_entries:
-    #    content += entry
+    for entry in content_entris:
+        content += entry
+    for entry in sorted_content_entries:
+        content += entry
 
     with open("README.md", "w") as fd:
         fd.write(content)
