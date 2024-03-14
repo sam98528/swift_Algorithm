@@ -24,7 +24,7 @@ def extract_submission_date(readme_path):
                         submission_date = datetime(2024, 1, 1, 0, 0, 0)
                 elif "[문제 링크]" in line:  # 문제 링크가 있는 줄을 찾음
                     link_index = line.find("(") + 1
-                    link = line[link_index:-1]  # 문제 링크를 추출
+                    link = line[link_index:-2]  # 문제 링크를 추출
             return submission_date, link
             print("Submission Date를 찾을 수 없습니다.")
     except FileNotFoundError:
