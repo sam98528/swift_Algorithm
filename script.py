@@ -8,13 +8,13 @@ from collections import defaultdict
 link = ""
 def extract_submission_date(readme_path):
     global link
-    readme_content = f.read()
-    pattern = r'\[문제 링크\]\((.*?)\)'
-    match = re.search(pattern, readme_content)
-    if match:
-        link = match.group(1)
     try:
         with open(readme_path, "r", encoding="utf-8") as f:
+            readme_content = f.read()
+            pattern = r'\[문제 링크\]\((.*?)\)'
+            match = re.search(pattern, readme_content)
+            if match:
+                link = match.group(1)
             readme_lines = f.readlines()
             for index, line in enumerate(readme_lines):
                 if "제출 일자" in line:
