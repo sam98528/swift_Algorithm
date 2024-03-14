@@ -28,6 +28,13 @@ def extract_submission_date(readme_path):
 
 
 def main():
+    content = """
+# Swift 문제 풀이 목록\n
+프로그래머스 및 백준 문제들을 정리한 Repository입니다!\n
+지금까지 총 **{}** 문제를 풀었습니다!
+자동으로 업데이트 중!\n
+""".format(directory_count)
+    
     content_entries = []
     sorting_entries = []
     directory_count = 0
@@ -74,22 +81,17 @@ def main():
                     sorting_entries.append(entry)
                     solveds.append(category)
                     directory_count += 1
-
-    # 날짜를 기준으로 정렬
-    # sorted_content_entries = sorted(sorting_entries, key=lambda x: datetime.strptime(x.split("|")[-1].strip(), "%Y-%m-%d"), reverse=True)
-
-    content = """
-# Swift 문제 풀이 목록\n
-프로그래머스 및 백준 문제들을 정리한 Repository입니다!\n
-지금까지 총 **{}** 문제를 풀었습니다!
-자동으로 업데이트 중!\n
-""".format(directory_count)
-
-    # 정렬된 내용을 content에 추가
     for entry in content_entries:
         content += entry
     for entry in sorting_entries:
         content += entry
+    # 날짜를 기준으로 정렬
+    # sorted_content_entries = sorted(sorting_entries, key=lambda x: datetime.strptime(x.split("|")[-1].strip(), "%Y-%m-%d"), reverse=True)
+
+
+
+    # 정렬된 내용을 content에 추가
+    
 
     with open("README.md", "w") as fd:
         fd.write(content)
