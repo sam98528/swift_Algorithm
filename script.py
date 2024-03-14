@@ -11,17 +11,15 @@ HEADER="""
 """
 
 def extract_submission_date(readme_path):
-    try:
-        with open(readme_path, "r", encoding="utf-8") as f:
-            readme_lines = f.readlines()
-            for index, line in enumerate(readme_lines):
-                if "제출 일자" in line:
-                    submission_date_index = index + 2
-                    submission_date_str = readme_lines[submission_date_index].strip()
+    with open(readme_path, "r", encoding="utf-8") as f:
+        for line in f:
+            if "제출 일자" in line:
+                submission_date_str = next(f).strip()
 
-                    # 날짜를 파싱하여 datetime 객체로 변환
-                    submission_date = datetime.strptime(submission_date_str, "%Y년 %m월 %d일 %H:%M:%S")
-                    return submission_date
+                # 날짜를 파싱하여 datetime 객체로 변환
+                submission_date = datetime.strptime(submission_date_str, "%Y년 %m월 %d일 %H:%M:%S")
+                return submission_date
+
 
 def main():
     content = HEADER
