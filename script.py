@@ -87,12 +87,8 @@ def main():
 
     # 정렬된 내용을 content에 추가
     
-content = """
-# Swift 문제 풀이 목록\n
-프로그래머스 및 백준 문제들을 정리한 Repository입니다!\n
-지금까지 총 **{}** 문제를 풀었습니다!
-자동으로 업데이트 중!\n
-""".format(directory_count) + content
+    content = """
+    # Swift 문제 풀이 목록\n 프로그래머스 및 백준 문제들을 정리한 Repository입니다!\n 지금까지 총 **{}** 문제를 풀었습니다!\n 자동으로 업데이트 중!\n """.format(directory_count) + content
 
     with open("README.md", "w") as fd:
         fd.write(content)
