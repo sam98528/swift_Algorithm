@@ -5,17 +5,11 @@ from urllib import parse
 from datetime import datetime
 from collections import defaultdict
 
-link = ""
+
 def extract_submission_date(readme_path):
-    global link
+    link = ""
     try:
         with open(readme_path, "r", encoding="utf-8") as f:
-            readme_content = f.read()
-            pattern = r'\[문제 링크\]\((.*?)\)'
-            match = re.search(pattern, readme_content)
-            if match:
-                link = match.group(1)
-            readme_lines = f.readlines()
             for index, line in enumerate(readme_lines):
                 if "제출 일자" in line:
                     submission_date_index = index + 2
@@ -27,8 +21,10 @@ def extract_submission_date(readme_path):
                     except ValueError:
                         print("이상한 데이터 발견: {}".format(submission_date_str))
                         submission_date = datetime(2024, 1, 1, 0, 0, 0)
-                    return submission_date
-            
+                 elif "[문제 링크]" in line:  # 문제 링크가 있는 줄을 찾음
+                    link_index = line.find("(") + 1
+                    link = line[link_index:-1]  # 문제 링크를 추출
+                 return submission_date, link
             print("Submission Date를 찾을 수 없습니다.")
     except FileNotFoundError:
         print("README.md 파일을 찾을 수 없습니다.")
@@ -69,7 +65,7 @@ def main():
         for file in files:
             if file == 'README.md':
                 if category not in solveds:
-                    submission_date = extract_submission_date(os.path.join(root, file))
+                    submission_date , link = extract_submission_date(os.path.join(root, file))
                     if submission_date:
                         entry = "| <center> [{}]({}) </center>|<center> {} </center>|<center> {} </center>|<center>[Link]({}) </center>|<center> {} </center>|\n".format(temp,link, "LV " + directory, category, parse.quote(os.path.join(root)), submission_date.strftime("%Y-%m-%d"))
                     else:
