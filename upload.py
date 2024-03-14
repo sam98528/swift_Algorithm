@@ -10,7 +10,8 @@ HEADER="""
 
 def main():
   content = ""
-  content += HEADER
+  # content += HEADER
+  directory_count = 0
   
   directories = []
   solveds = []
@@ -49,7 +50,13 @@ def main():
         if category not in solveds:
           content += "| {} |[링크]({})|\n".format(category, parse.quote(os.path.join(root, file)))
           solveds.append(category)
-          
+          directory_count += 1
+
+  content = """
+  # Swift 문제 풀이 목록\n
+  프로그래머스 및 백준 문제들을 정리한 Repository입니다!\n
+  지금까지 총 {} 문제를 풀었습니다!\n
+  """.format(directory_count) + content
   with open("README.md", "w") as fd:
     fd.write(content)
     
