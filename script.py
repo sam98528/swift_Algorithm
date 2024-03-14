@@ -61,7 +61,7 @@ def main():
                 if category not in solveds:
                     submission_date = extract_submission_date(os.path.join(root, file))
                     if submission_date:
-                        entry = "| {} | {} |[Link]({})|{}|\n".format(directory, category, parse.quote(os.path.join(root, file)), submission_date.strftime("%Y-%m-%d"))
+                        entry = "| {} | {} |[Link]({})|{}|\n".format(directory, category, parse.quote(os.path.join(root)), submission_date.strftime("%Y-%m-%d"))
                     else:
                         entry = "| {} | {} |[Link]({})|{}|\n".format(directory, category, parse.quote(os.path.join(root, file)), "제출 일자를 찾을 수 없음")
                     sorting_entries.append(entry)
