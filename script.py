@@ -15,9 +15,10 @@ def extract_submission_date(readme_path):
         readme_content = f.read()
         submission_date_start = readme_content.find("제출 일자\n") + len("제출 일자\n")
         submission_date_end = readme_content.find("\n", submission_date_start)
-        submission_date_str = readme_content[submission_date_start:submission_date_end]
+        submission_date_str = readme_content[submission_date_start:submission_date_end].strip()
         submission_date = datetime.strptime(submission_date_str, "%Y년 %m월 %d일 %H:%M:%S")
         return submission_date
+
 
 def main():
     content = HEADER
