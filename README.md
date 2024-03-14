@@ -5,7 +5,7 @@
  
 자동으로 업데이트 중!
  
-| 알고리즘 사이트 | 난이도 | 문제번호 | 링크 | 제출일자 |
+| 알고리즘 사이트 | 난이도 | 문제번호 | 풀이 | 제출일자 |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | <center> 백준 </center>|<center> LV Bronze </center>|<center> 1001. A－B </center>|<center>[Link](./%EB%B0%B1%EC%A4%80/Bronze/1001.%E2%80%85A%EF%BC%8DB) </center>|<center> 2024-02-06 </center>|
 | <center> 프로그래머스 </center>|<center> LV 0 </center>|<center> 120802. 두 수의 합 </center>|<center>[Link](./%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/0/120802.%E2%80%85%EB%91%90%E2%80%85%EC%88%98%EC%9D%98%E2%80%85%ED%95%A9) </center>|<center> 2024-01-03 </center>|
