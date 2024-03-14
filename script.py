@@ -52,5 +52,5 @@ def update_main_readme(repo_path):
 
 
 if __name__ == "__main__":
-    repository_path = "/path/to/your/repository"
+    repository_path = "."
     update_main_readme(repository_path)
