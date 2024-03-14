@@ -64,7 +64,7 @@ def main():
                 if category not in solveds:
                     submission_date = extract_submission_date(os.path.join(root, file))
                     if submission_date:
-                        entry = "| <center> {} </center>|<center> {} </center>|<center> {} </center>|<center>[Link]({}) </center>|<center> {} </center>|\n".format(temp, directory, category, parse.quote(os.path.join(root)), submission_date.strftime("%Y-%m-%d"))
+                        entry = "| <center> {} </center>|<center> {} </center>|<center> {} </center>|<center>[Link]({}) </center>|<center> {} </center>|\n".format(temp, "LV " + directory, category, parse.quote(os.path.join(root)), submission_date.strftime("%Y-%m-%d"))
                     else:
                         entry = "| {} | {} |[Link]({})|{}|\n".format(directory, category, parse.quote(os.path.join(root, file)), "제출 일자를 찾을 수 없음")
                     sorting_entries.append(entry)
@@ -81,7 +81,7 @@ def main():
 
     # 정렬된 내용을 content에 추가
     
-    content = """# Swift 문제 풀이 목록\n 프로그래머스 및 백준 문제들을 정리한 Repository입니다!\n 
+    content = """# Swift 문제 풀이 목록 🐶\n 프로그래머스 및 백준 문제들을 정리한 Repository입니다!\n 
 지금까지 총 **{}** 문제를 풀었습니다!\n 
 자동으로 업데이트 중!\n 
 """.format(directory_count) + content
