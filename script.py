@@ -77,7 +77,7 @@ def main():
     for entry in content_entries:
         content += entry
     sorted_content_entries = sorted(sorting_entries, key=lambda x: datetime.strptime(x.split("|")[-2].strip(), "%Y-%m-%d"), reverse=True)
-    for entry in sorting_entries:
+    for entry in sorted_content_entries:
         content += entry
     # 날짜를 기준으로 정렬
     
