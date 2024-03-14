@@ -23,7 +23,6 @@ def extract_submission_date(readme_path):
                     submission_date = datetime.strptime(submission_date_str, "%Y년 %m월 %d일 %H:%M:%S")
                     return submission_date
 
-
 def main():
     content = HEADER
     directory_count = 0
