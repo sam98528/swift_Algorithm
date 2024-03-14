@@ -29,6 +29,7 @@ def extract_submission_date(readme_path):
 
 def main():
     content_entries = []
+    sorting_entries = []
     directory_count = 0
 
     directories = []
@@ -71,23 +72,23 @@ def main():
                         entry = "| {} | {} |[링크]({})|{}|\n".format(directory, category, parse.quote(os.path.join(root, file)), submission_date.strftime("%Y-%m-%d"))
                     else:
                         entry = "| {} | {} |[링크]({})|{}|\n".format(directory, category, parse.quote(os.path.join(root, file)), "제출 일자를 찾을 수 없음")
-                    content_entries.append(entry)
+                    sorting_entries.append(entry)
                     solveds.append(category)
                     directory_count += 1
 
     # 날짜를 기준으로 정렬
-    sorted_content_entries = sorted(content_entries, key=lambda x: datetime.strptime(x.split("|")[-1].strip(), "%Y-%m-%d"), reverse=True)
+    sorted_content_entries = sorted(sorting_entries, key=lambda x: datetime.strptime(x.split("|")[-1].strip(), "%Y-%m-%d"), reverse=True)
 
     content = """
 # Swift 문제 풀이 목록\n
 프로그래머스 및 백준 문제들을 정리한 Repository입니다!\n
 지금까지 총 **{}** 문제를 풀었습니다!
 자동으로 업데이트 중!\n
-""".format(directory_count)
+""".format(directory_count) + content_entries + sorting_entries
 
     # 정렬된 내용을 content에 추가
-    for entry in sorted_content_entries:
-        content += entry
+    #for entry in sorted_content_entries:
+    #    content += entry
 
     with open("README.md", "w") as fd:
         fd.write(content)
