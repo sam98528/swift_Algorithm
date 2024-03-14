@@ -29,7 +29,7 @@ def extract_submission_date(readme_path):
 
 def main():
     
-    content = ""
+    content = "| 알고리즘 사이트 | 난이도 | 문제번호 | 링크 | 제출일자 |\n" + "| ------------- | ------------- | ------------- | ------------- | ------------- |\n"
     content_entries = []
     sorting_entries = []
     directory_count = 0
@@ -56,22 +56,14 @@ def main():
 
         if directory == '.':
             continue
-
-        if directory not in directories:
-            if directory in ["프로그래머스", "백준"]:
-                content_entries.append("## 🐶 {}\n".format(directory))
-                content_entries.append("| 난이도 | 문제번호 | 링크 | 제출일자 |\n")
-                content_entries.append("| ------------- | ------------- | ------------- | ------------- |\n")
-            directories.append(directory)
-
         for file in files:
             if file == 'README.md':
                 if category not in solveds:
                     submission_date = extract_submission_date(os.path.join(root, file))
                     if submission_date:
-                        entry = "| {} | {} |[링크]({})|{}|\n".format(directory, category, parse.quote(os.path.join(root, file)), submission_date.strftime("%Y-%m-%d"))
+                        entry = "| {} | {} |[Link]({})|{}|\n".format(directory, category, parse.quote(os.path.join(root, file)), submission_date.strftime("%Y-%m-%d"))
                     else:
-                        entry = "| {} | {} |[링크]({})|{}|\n".format(directory, category, parse.quote(os.path.join(root, file)), "제출 일자를 찾을 수 없음")
+                        entry = "| {} | {} |[Link]({})|{}|\n".format(directory, category, parse.quote(os.path.join(root, file)), "제출 일자를 찾을 수 없음")
                     sorting_entries.append(entry)
                     solveds.append(category)
                     directory_count += 1
