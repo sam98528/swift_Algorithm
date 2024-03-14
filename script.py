@@ -5,8 +5,6 @@ from urllib import parse
 from datetime import datetime
 from collections import defaultdict
 
-
-
 def extract_submission_date(readme_path):
     try:
         with open(readme_path, "r", encoding="utf-8") as f:
@@ -26,8 +24,6 @@ def extract_submission_date(readme_path):
             print("Submission Date를 찾을 수 없습니다.")
     except FileNotFoundError:
         print("README.md 파일을 찾을 수 없습니다.")
-
-
 
 def main():
     content = ""
@@ -57,12 +53,9 @@ def main():
             continue
 
         if directory not in directories:
-            if directory in ["프로그래머스", "백준"]:
-                content += "## 🐶 {}\n".format(directory)
-            else:
-                content += "### 🙉 Level {}\n".format(directory)
-                content += "| 문제번호 | 링크 | 제출일자 |\n"
-                content += "| ------------- | ------------- | ------------- |\n"
+            content += "### 🙉 Level {}\n".format(directory)
+            content += "| 난이도 | 문제번호 | 링크 | 제출일자 |\n"
+            content += "| ----- | ------------- | ------------- | ------------- |\n"
             directories.append(directory)
 
         for file in files:
@@ -70,9 +63,9 @@ def main():
                 if category not in solveds:
                     submission_date = extract_submission_date(os.path.join(root, file))
                     if submission_date:
-                        content += "| {} |[링크]({})|{}|\n".format(category, parse.quote(os.path.join(root, file)), submission_date.strftime("%Y-%m-%d"))
+                        content += "| {} | {} |[링크]({})|{}|\n".format(directory, category, parse.quote(os.path.join(root, file)), submission_date.strftime("%Y-%m-%d"))
                     else:
-                        content += "| {} |[링크]({})|{}|\n".format(category, parse.quote(os.path.join(root, file)), "제출 일자를 찾을 수 없음")
+                        content += "| {} | {} |[링크]({})|{}|\n".format(directory, category, parse.quote(os.path.join(root, file)), "제출 일자를 찾을 수 없음")
                     solveds.append(category)
                     directory_count += 1
 
@@ -82,8 +75,14 @@ def main():
 지금까지 총 **{}** 문제를 풀었습니다!
 자동으로 업데이트 중!\n
 """.format(directory_count) + content
+
+    # 문제들을 제출일자를 기준으로 정렬
+    sorted_content = content.splitlines()
+    sorted_content = sorted_content[:5] + sorted(sorted_content[5:], key=lambda x: datetime.strptime(x.split('|')[-1].strip(), "%Y-%m-%d"))
+    sorted_content = '\n'.join(sorted_content)
+
     with open("README.md", "w") as fd:
-        fd.write(content)
+        fd.write(sorted_content)
 
 if __name__ == "__main__":
     main()
