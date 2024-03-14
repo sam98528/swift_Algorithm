@@ -10,6 +10,7 @@ def extract_submission_date(readme_path):
     link = ""
     try:
         with open(readme_path, "r", encoding="utf-8") as f:
+            readme_lines = f.readlines()
             for index, line in enumerate(readme_lines):
                 if "제출 일자" in line:
                     submission_date_index = index + 2
