@@ -68,7 +68,7 @@ def main():
                 if category not in solveds:
                     submission_date , link = extract_submission_date(os.path.join(root, file))
                     if submission_date:
-                        entry = "| <center> [문제링크]({} </center>|<center> {} </center>|<center> {} </center>|<center>[Link]({}) </center>|<center> {} </center>|\n".format(link, "LV " + directory, category, parse.quote(os.path.join(root)), submission_date.strftime("%Y-%m-%d"))
+                        entry = "| [문제링크]({} |{} |{}|[Link]({})|{}|\n".format(link, "LV " + directory, category, parse.quote(os.path.join(root)), submission_date.strftime("%Y-%m-%d"))
                     else:
                         entry = "| {} | {} |[Link]({})|{}|\n".format(directory, category, parse.quote(os.path.join(root, file)), "제출 일자를 찾을 수 없음")
                     sorting_entries.append(entry)
@@ -76,10 +76,11 @@ def main():
                     directory_count += 1
     for entry in content_entries:
         content += entry
+    sorted_content_entries = sorted(sorting_entries, key=lambda x: datetime.strptime(x.split("|")[-1].strip(), "%Y-%m-%d"), reverse=True)
     for entry in sorting_entries:
         content += entry
     # 날짜를 기준으로 정렬
-    # sorted_content_entries = sorted(sorting_entries, key=lambda x: datetime.strptime(x.split("|")[-1].strip(), "%Y-%m-%d"), reverse=True)
+    
 
 
 
