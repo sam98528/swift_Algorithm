@@ -86,7 +86,7 @@ def main():
 """.format(directory_count)
 
     # 정렬된 내용을 content에 추가
-    for entry in content_entris:
+    for entry in content_entries:
         content += entry
     for entry in sorted_content_entries:
         content += entry
