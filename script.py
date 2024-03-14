@@ -29,7 +29,7 @@ def extract_submission_date(readme_path):
 
 def main():
     
-    
+    content = ""
     content_entries = []
     sorting_entries = []
     directory_count = 0
