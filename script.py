@@ -74,12 +74,11 @@ def main():
 
         for file in files:
             if file == 'README.md':
-                continue
-            if category not in solveds:
-                submission_date = extract_submission_date(os.path.join(root, file))
-                content += "| {} |[링크]({})|{}|\n".format(category, parse.quote(os.path.join(root, file)), submission_date.strftime("%Y-%m-%d"))
-                solveds.append(category)
-                directory_count += 1
+                if category not in solveds:
+                    submission_date = extract_submission_date(os.path.join(root, file))
+                    content += "| {} |[링크]({})|{}|\n".format(category, parse.quote(os.path.join(root, file)), submission_date.strftime("%Y-%m-%d"))
+                    solveds.append(category)
+                    directory_count += 1
 
     content = """
 # Swift 문제 풀이 목록\n
