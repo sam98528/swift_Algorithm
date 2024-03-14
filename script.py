@@ -20,11 +20,16 @@ def extract_submission_date(readme_path):
                     submission_date_str = readme_lines[submission_date_index].strip()
 
                     # 날짜를 파싱하여 datetime 객체로 변환
-                    submission_date = datetime.strptime(submission_date_str, "%Y년 %m월 %d일 %H:%M:%S")
+                    try:
+                        submission_date = datetime.strptime(submission_date_str, "%Y년 %m월 %d일 %H:%M:%S")
+                    except ValueError:
+                        print("이상한 데이터 발견: {}".format(submission_date_str))
+                        submission_date = datetime(2024, 1, 1, 0, 0, 0)
                     return submission_date
             print("Submission Date를 찾을 수 없습니다.")
     except FileNotFoundError:
         print("README.md 파일을 찾을 수 없습니다.")
+
 
 
 def main():
