@@ -46,11 +46,11 @@ def main():
       directories.append(directory)
       
     for file in files:
-      if file == 'README.md':
-        if category not in solveds:
-          content += "| {} |[링크]({})|\n".format(category, parse.quote(os.path.join(root, file)))
-          solveds.append(category)
-          directory_count += 1
+      #if file == 'README.md':
+      if category not in solveds:
+        content += "| {} |[링크]({})|\n".format(category, parse.quote(os.path.join(root)))
+        solveds.append(category)
+        directory_count += 1
 
   content = """
   # Swift 문제 풀이 목록\n
