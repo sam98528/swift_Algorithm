@@ -1,12 +1,13 @@
 # Swift 문제 풀이 목록 🐶
  프로그래머스 및 백준 문제들을 정리한 Repository입니다!
  
-지금까지 총 **177** 문제를 풀었습니다!
+지금까지 총 **178** 문제를 풀었습니다!
  
 자동으로 업데이트 중!
  
 | 알고리즘 사이트 | 난이도 | 문제번호 | 풀이 | 제출일자 |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
+| [문제링크](https://www.acmicpc.net/problem/1000) |LV Bronze |1000. A＋B|[Link](./%EB%B0%B1%EC%A4%80/Bronze/1000.%E2%80%85A%EF%BC%8BB)|2024-03-28|
 | [문제링크](https://www.acmicpc.net/problem/2557) |LV Bronze |2557. Hello World|[Link](./%EB%B0%B1%EC%A4%80/Bronze/2557.%E2%80%85Hello%E2%80%85World)|2024-03-28|
 | [문제링크](https://school.programmers.co.kr/learn/courses/30/lessons/147354#qna) |LV 2 |147354. 테이블 해시 함수|[Link](./%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/2/147354.%E2%80%85%ED%85%8C%EC%9D%B4%EB%B8%94%E2%80%85%ED%95%B4%EC%8B%9C%E2%80%85%ED%95%A8%EC%88%98)|2024-03-27|
 | [문제링크](https://school.programmers.co.kr/learn/courses/30/lessons/152996) |LV 2 |152996. 시소 짝꿍|[Link](./%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/2/152996.%E2%80%85%EC%8B%9C%EC%86%8C%E2%80%85%EC%A7%9D%EA%BF%8D)|2024-03-27|
