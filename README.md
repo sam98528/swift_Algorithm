@@ -8,6 +8,7 @@
 | 알고리즘 사이트 | 난이도 | 문제번호 | 풀이 | 제출일자 |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | [문제링크](https://www.acmicpc.net/problem/1000) |LV Bronze |1000. A＋B|[Link](./%EB%B0%B1%EC%A4%80/Bronze/1000.%E2%80%85A%EF%BC%8BB)|2024-03-28|
+| [문제링크](https://www.acmicpc.net/problem/1001) |LV Bronze |1001. A－B|[Link](./%EB%B0%B1%EC%A4%80/Bronze/1001.%E2%80%85A%EF%BC%8DB)|2024-03-28|
 | [문제링크](https://www.acmicpc.net/problem/2557) |LV Bronze |2557. Hello World|[Link](./%EB%B0%B1%EC%A4%80/Bronze/2557.%E2%80%85Hello%E2%80%85World)|2024-03-28|
 | [문제링크](https://school.programmers.co.kr/learn/courses/30/lessons/147354#qna) |LV 2 |147354. 테이블 해시 함수|[Link](./%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/2/147354.%E2%80%85%ED%85%8C%EC%9D%B4%EB%B8%94%E2%80%85%ED%95%B4%EC%8B%9C%E2%80%85%ED%95%A8%EC%88%98)|2024-03-27|
 | [문제링크](https://school.programmers.co.kr/learn/courses/30/lessons/152996) |LV 2 |152996. 시소 짝꿍|[Link](./%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/2/152996.%E2%80%85%EC%8B%9C%EC%86%8C%E2%80%85%EC%A7%9D%EA%BF%8D)|2024-03-27|
@@ -43,7 +44,6 @@
 | [문제링크](https://school.programmers.co.kr/learn/courses/30/lessons/92335) |LV 2 |92335. k진수에서 소수 개수 구하기|[Link](./%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/2/92335.%E2%80%85k%EC%A7%84%EC%88%98%EC%97%90%EC%84%9C%E2%80%85%EC%86%8C%EC%88%98%E2%80%85%EA%B0%9C%EC%88%98%E2%80%85%EA%B5%AC%ED%95%98%EA%B8%B0)|2024-02-27|
 | [문제링크](https://school.programmers.co.kr/learn/courses/30/lessons/92341) |LV 2 |92341. 주차 요금 계산|[Link](./%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/2/92341.%E2%80%85%EC%A3%BC%EC%B0%A8%E2%80%85%EC%9A%94%EA%B8%88%E2%80%85%EA%B3%84%EC%82%B0)|2024-02-27|
 | [문제링크](https://school.programmers.co.kr/learn/courses/30/lessons/76502) |LV 2 |76502. 괄호 회전하기|[Link](./%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/2/76502.%E2%80%85%EA%B4%84%ED%98%B8%E2%80%85%ED%9A%8C%EC%A0%84%ED%95%98%EA%B8%B0)|2024-02-10|
-| [문제링크](https://www.acmicpc.net/problem/1001) |LV Bronze |1001. A－B|[Link](./%EB%B0%B1%EC%A4%80/Bronze/1001.%E2%80%85A%EF%BC%8DB)|2024-02-06|
 | [문제링크](https://school.programmers.co.kr/learn/courses/30/lessons/12914) |LV 2 |12914. 멀리 뛰기|[Link](./%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/2/12914.%E2%80%85%EB%A9%80%EB%A6%AC%E2%80%85%EB%9B%B0%EA%B8%B0)|2024-02-06|
 | [문제링크](https://school.programmers.co.kr/learn/courses/30/lessons/12953) |LV 2 |12953. N개의 최소공배수|[Link](./%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/2/12953.%E2%80%85N%EA%B0%9C%EC%9D%98%E2%80%85%EC%B5%9C%EC%86%8C%EA%B3%B5%EB%B0%B0%EC%88%98)|2024-02-06|
 | [문제링크](https://school.programmers.co.kr/learn/courses/30/lessons/138476) |LV 2 |138476. 귤 고르기|[Link](./%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/2/138476.%E2%80%85%EA%B7%A4%E2%80%85%EA%B3%A0%EB%A5%B4%EA%B8%B0)|2024-02-06|
