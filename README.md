@@ -7,6 +7,7 @@
  
 | 알고리즘 사이트 | 난이도 | 문제번호 | 풀이 | 제출일자 |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
+| [문제링크](https://school.programmers.co.kr/learn/courses/30/lessons/92334) |LV 1 |92334. 신고 결과 받기|[Link](./%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/1/92334.%E2%80%85%EC%8B%A0%EA%B3%A0%E2%80%85%EA%B2%B0%EA%B3%BC%E2%80%85%EB%B0%9B%EA%B8%B0)|2024-04-05|
 | [문제링크](https://www.acmicpc.net/problem/1000) |LV Bronze |1000. A＋B|[Link](./%EB%B0%B1%EC%A4%80/Bronze/1000.%E2%80%85A%EF%BC%8BB)|2024-03-28|
 | [문제링크](https://www.acmicpc.net/problem/1001) |LV Bronze |1001. A－B|[Link](./%EB%B0%B1%EC%A4%80/Bronze/1001.%E2%80%85A%EF%BC%8DB)|2024-03-28|
 | [문제링크](https://www.acmicpc.net/problem/1008) |LV Bronze |1008. A／B|[Link](./%EB%B0%B1%EC%A4%80/Bronze/1008.%E2%80%85A%EF%BC%8FB)|2024-03-28|
@@ -67,7 +68,6 @@
 | [문제링크](https://school.programmers.co.kr/learn/courses/30/lessons/181910) |LV 0 |181910. 문자열의 뒤의 n글자|[Link](./%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/0/181910.%E2%80%85%EB%AC%B8%EC%9E%90%EC%97%B4%EC%9D%98%E2%80%85%EB%92%A4%EC%9D%98%E2%80%85n%EA%B8%80%EC%9E%90)|2024-02-04|
 | [문제링크](https://school.programmers.co.kr/learn/courses/30/lessons/181911) |LV 0 |181911. 부분 문자열 이어 붙여 문자열 만들기|[Link](./%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/0/181911.%E2%80%85%EB%B6%80%EB%B6%84%E2%80%85%EB%AC%B8%EC%9E%90%EC%97%B4%E2%80%85%EC%9D%B4%EC%96%B4%E2%80%85%EB%B6%99%EC%97%AC%E2%80%85%EB%AC%B8%EC%9E%90%EC%97%B4%E2%80%85%EB%A7%8C%EB%93%A4%EA%B8%B0)|2024-02-04|
 | [문제링크](https://school.programmers.co.kr/learn/courses/30/lessons/181935) |LV 0 |181935. 홀짝에 따라 다른 값 반환하기|[Link](./%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/0/181935.%E2%80%85%ED%99%80%EC%A7%9D%EC%97%90%E2%80%85%EB%94%B0%EB%9D%BC%E2%80%85%EB%8B%A4%EB%A5%B8%E2%80%85%EA%B0%92%E2%80%85%EB%B0%98%ED%99%98%ED%95%98%EA%B8%B0)|2024-02-04|
-| [문제링크](https://school.programmers.co.kr/learn/courses/30/lessons/92334) |LV 1 |92334. 신고 결과 받기|[Link](./%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/1/92334.%E2%80%85%EC%8B%A0%EA%B3%A0%E2%80%85%EA%B2%B0%EA%B3%BC%E2%80%85%EB%B0%9B%EA%B8%B0)|2024-02-04|
 | [문제링크](https://school.programmers.co.kr/learn/courses/30/lessons/12939) |LV 2 |12939. 최댓값과 최솟값|[Link](./%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/2/12939.%E2%80%85%EC%B5%9C%EB%8C%93%EA%B0%92%EA%B3%BC%E2%80%85%EC%B5%9C%EC%86%9F%EA%B0%92)|2024-02-04|
 | [문제링크](https://school.programmers.co.kr/learn/courses/30/lessons/12945) |LV 2 |12945. 피보나치 수|[Link](./%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/2/12945.%E2%80%85%ED%94%BC%EB%B3%B4%EB%82%98%EC%B9%98%E2%80%85%EC%88%98)|2024-02-04|
 | [문제링크](https://school.programmers.co.kr/learn/courses/30/lessons/12951) |LV 2 |12951. JadenCase 문자열 만들기|[Link](./%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/2/12951.%E2%80%85JadenCase%E2%80%85%EB%AC%B8%EC%9E%90%EC%97%B4%E2%80%85%EB%A7%8C%EB%93%A4%EA%B8%B0)|2024-02-04|
