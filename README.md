@@ -1,13 +1,14 @@
 # Swift 문제 풀이 목록 🐶
  프로그래머스 및 백준 문제들을 정리한 Repository입니다!
  
-지금까지 총 **180** 문제를 풀었습니다!
+지금까지 총 **181** 문제를 풀었습니다!
  
 자동으로 업데이트 중!
  
 | 알고리즘 사이트 | 난이도 | 문제번호 | 풀이 | 제출일자 |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | [문제링크](https://www.acmicpc.net/problem/1094) |LV Silver |1094. 막대기|[Link](./%EB%B0%B1%EC%A4%80/Silver/1094.%E2%80%85%EB%A7%89%EB%8C%80%EA%B8%B0)|2024-04-19|
+| [문제링크](https://www.acmicpc.net/problem/1181) |LV Silver |1181. 단어 정렬|[Link](./%EB%B0%B1%EC%A4%80/Silver/1181.%E2%80%85%EB%8B%A8%EC%96%B4%E2%80%85%EC%A0%95%EB%A0%AC)|2024-04-19|
 | [문제링크](https://school.programmers.co.kr/learn/courses/30/lessons/92334) |LV 1 |92334. 신고 결과 받기|[Link](./%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/1/92334.%E2%80%85%EC%8B%A0%EA%B3%A0%E2%80%85%EA%B2%B0%EA%B3%BC%E2%80%85%EB%B0%9B%EA%B8%B0)|2024-04-05|
 | [문제링크](https://www.acmicpc.net/problem/1000) |LV Bronze |1000. A＋B|[Link](./%EB%B0%B1%EC%A4%80/Bronze/1000.%E2%80%85A%EF%BC%8BB)|2024-03-28|
 | [문제링크](https://www.acmicpc.net/problem/1001) |LV Bronze |1001. A－B|[Link](./%EB%B0%B1%EC%A4%80/Bronze/1001.%E2%80%85A%EF%BC%8DB)|2024-03-28|
