@@ -1,12 +1,13 @@
 # Swift 문제 풀이 목록 🐶
  프로그래머스 및 백준 문제들을 정리한 Repository입니다!
  
-지금까지 총 **182** 문제를 풀었습니다!
+지금까지 총 **183** 문제를 풀었습니다!
  
 자동으로 업데이트 중!
  
 | 알고리즘 사이트 | 난이도 | 문제번호 | 풀이 | 제출일자 |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
+| [문제링크](https://school.programmers.co.kr/learn/courses/30/lessons/258712) |LV 1 |258712. 가장 많이 받은 선물|[Link](./%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/1/258712.%E2%80%85%EA%B0%80%EC%9E%A5%E2%80%85%EB%A7%8E%EC%9D%B4%E2%80%85%EB%B0%9B%EC%9D%80%E2%80%85%EC%84%A0%EB%AC%BC)|2024-07-09|
 | [문제링크](https://www.acmicpc.net/problem/1094) |LV Silver |1094. 막대기|[Link](./%EB%B0%B1%EC%A4%80/Silver/1094.%E2%80%85%EB%A7%89%EB%8C%80%EA%B8%B0)|2024-04-19|
 | [문제링크](https://www.acmicpc.net/problem/1181) |LV Silver |1181. 단어 정렬|[Link](./%EB%B0%B1%EC%A4%80/Silver/1181.%E2%80%85%EB%8B%A8%EC%96%B4%E2%80%85%EC%A0%95%EB%A0%AC)|2024-04-19|
 | [문제링크](https://school.programmers.co.kr/learn/courses/30/lessons/92334) |LV 1 |92334. 신고 결과 받기|[Link](./%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/1/92334.%E2%80%85%EC%8B%A0%EA%B3%A0%E2%80%85%EA%B2%B0%EA%B3%BC%E2%80%85%EB%B0%9B%EA%B8%B0)|2024-04-05|
